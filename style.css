@@ -292,13 +292,33 @@ body.menu-open { overflow: hidden; }
 .faq-list .answer a { color: var(--copper); }
 @media (min-width: 60rem) { .faq-head { grid-column: 1 / span 4; } .faq-list { grid-column: 6 / -1; margin-top: 0; } }
 
-/* Chamada final */
-.cta { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(5rem, 3rem + 9vw, 11rem); }
-.cta::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50rem 30rem at 15% 100%, rgba(219, 168, 146, 0.14), transparent 65%); }
-.cta h2 { font-size: clamp(3rem, 1.4rem + 7.4vw, 8.5rem); line-height: 0.9; letter-spacing: -0.035em; max-width: 11ch; }
-.cta p { margin-top: 1.75rem; }
-.cta-side { margin-top: 3rem; display: flex; justify-content: flex-start; }
-@media (min-width: 60rem) { .cta-main { grid-column: 1 / span 9; } .cta-side { grid-column: 10 / -1; margin-top: 0; align-self: end; justify-content: flex-end; } }
+/* Chamada para agendamento */
+.cta { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(5rem, 3rem + 8vw, 10rem); }
+.cta::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50rem 30rem at 12% 100%, rgba(219, 168, 146, 0.16), transparent 65%); }
+.cta h2 { font-size: clamp(2.75rem, 1.4rem + 6vw, 7rem); line-height: 0.92; letter-spacing: -0.035em; max-width: 12ch; }
+.cta .lead { margin-top: 1.5rem; max-width: 40ch; }
+.chips-label { margin-top: clamp(2rem, 4vw, 3rem); font-size: var(--fs-micro); font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); }
+.chips { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.625rem; }
+.chip { display: inline-flex; align-items: center; gap: 0.75rem; min-height: 3.25rem; padding: 0.75rem 1.125rem 0.75rem 1.375rem; border: 1px solid var(--line-ink); border-radius: 999px; font-size: 1rem; font-weight: 500; text-decoration: none; transition: background-color 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease); }
+.chip svg { width: 0.9375rem; height: 0.9375rem; flex: none; transition: transform 0.35s var(--ease-out); }
+.chip:hover, .chip--on { background: var(--ivory); color: var(--ink); border-color: var(--ivory); }
+.chip:hover svg { transform: translateX(3px); }
+.chip--on:hover { background: var(--rose); border-color: var(--rose); }
+.cta-alt { margin-top: 1.5rem; font-size: var(--fs-small); color: var(--on-ink-soft); }
+.cta-alt a { color: var(--ivory); }
+.cta-card { margin-top: 3rem; padding: clamp(1.5rem, 3vw, 2.25rem); border-radius: calc(var(--radius) * 2); background: var(--ivory); color: var(--text); }
+.cta-card-head { display: flex; align-items: center; gap: 1rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+.cta-card-head .seal { width: 4.75rem; height: 4.75rem; color: var(--ink); flex: none; }
+.cta-card-head p { font-family: var(--serif); font-size: 1.75rem; line-height: 1; letter-spacing: -0.015em; }
+.cta-card ol { counter-reset: c; }
+.cta-card li { counter-increment: c; position: relative; padding: 1.125rem 0 1.125rem 2.75rem; border-bottom: 1px solid var(--line); font-size: var(--fs-small); color: var(--soft); line-height: 1.45; }
+.cta-card li::before { content: "0" counter(c); position: absolute; left: 0; top: 1.125rem; font-family: var(--serif); font-style: italic; font-size: 1.375rem; line-height: 1.1; color: var(--copper); }
+.cta-card li b { display: block; font-size: 1.0625rem; font-weight: 600; color: var(--text); }
+.cta-card-foot { margin-top: 1.125rem; font-size: var(--fs-micro); letter-spacing: 0.08em; color: var(--soft); }
+@media (max-width: 33.99rem) { .chips li { flex: 1 1 100%; } .chip { width: 100%; justify-content: space-between; } }
+@media (min-width: 62rem) { .cta-main { grid-column: 1 / span 7; } .cta-card { grid-column: 9 / -1; margin-top: 0; align-self: center; } }
+.hero-note { margin-top: 1rem; font-size: var(--fs-small); color: var(--on-ink-soft); max-width: 40ch; }
+@media (prefers-reduced-motion: no-preference) { .hero-note { opacity: 0; animation: fade-up 0.9s var(--ease-out) 1.15s forwards; } }
 
 /* 9. Páginas internas ------------------------------------------------------ */
 .page-hero { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(3.5rem, 7vw, 7rem); }
