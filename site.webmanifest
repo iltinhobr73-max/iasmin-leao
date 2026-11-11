@@ -1,0 +1,16 @@
+{
+ "name": "Iasmim Leão · Odontologia Estética",
+ "short_name": "Iasmim Leão",
+ "start_url": "./index.html",
+ "display": "browser",
+ "background_color": "#171210",
+ "theme_color": "#171210",
+ "lang": "pt-BR",
+ "icons": [
+  {
+   "src": "favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  }
+ ]
+}
