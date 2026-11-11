@@ -20,4 +20,7 @@ c = src(49); save(c.crop((0, 80, 175, 430)), "caso3-antes", (300, 600)); save(c.
 c = src(45); save(c.crop((0, 310, 246, 618)), "labios-antes", (400, 500)); save(c.crop((250, 310, 496, 618)), "labios-depois", (400, 500))
 # capa para compartilhamento
 capa = Image.new("RGB", (1200, 630), (22, 17, 16)); r = p.crop((40, 60, 440, 480)).resize((600, 630), Image.LANCZOS); capa.paste(r, (600, 0)); capa.save(f"{OUT}/il-capa.jpg", "JPEG", quality=86)
+# miniatura quadrada para a prévia do link no WhatsApp e redes (foto dela, enquadrada no rosto e no tronco)
+q = p.crop((70, 92, 370, 392)).resize((600, 600), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.2, percent=30, threshold=2))
+q.save(f"{OUT}/il-link.jpg", "JPEG", quality=88, optimize=True)
 print("ok")

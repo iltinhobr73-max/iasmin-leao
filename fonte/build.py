@@ -11,7 +11,7 @@ OUT = Path(__file__).parent.parent
 HOJE = "2026-11-11"
 
 # ───────────────────────────── DADOS ─────────────────────────────
-DOMINIO = "https://SEU-DOMINIO.com.br"   # trocar pelo endereço final antes de divulgar
+DOMINIO = "https://iasmin-leao.vercel.app"   # trocar se houver domínio próprio
 NOME = "Iasmim Leão"
 MARCA = "Iasmim Leão · Odontologia Estética"
 CRO = "CRO-CE 18162"
@@ -154,11 +154,14 @@ def layout(page, title, desc, body, wa_msg, crumb=None, faq=None, servico=None, 
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url_of(page)}">
-<meta property="og:image" content="{DOMINIO}/il-capa.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="{DOMINIO}/il-link.jpg">
+<meta property="og:image:secure_url" content="{DOMINIO}/il-link.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
 <meta property="og:image:alt" content="Iasmim Leão, cirurgiã-dentista, no consultório">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="{DOMINIO}/il-link.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="serif.woff2" as="font" type="font/woff2" crossorigin>
